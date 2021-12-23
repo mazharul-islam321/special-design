@@ -30,7 +30,7 @@ export default function Home() {
                     style={{
                         width: "78%",
                         height: 500,
-                        backgroundColor: "green",
+                        // backgroundColor: "green",
                     }}
                 >
                     <MainScreen></MainScreen>
