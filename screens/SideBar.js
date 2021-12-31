@@ -3,34 +3,51 @@ import { StyleSheet, Text, View } from "react-native";
 import { Ionicons } from "@expo/vector-icons";
 import { FontAwesome } from "@expo/vector-icons";
 import { FontAwesome5 } from "@expo/vector-icons";
+import { Link } from "react-router-native";
 
 export default function SideBar() {
     return (
         <View style={{ alignItems: "center" }}>
-            <View style={[styles.iconBox, styles.sidebarIcon]}>
-                <Ionicons name="logo-windows" size={20} color="black" />
-            </View>
-            <View style={[styles.iconBox, styles.sidebarIcon]}>
-                <FontAwesome name="gift" size={20} color="black" />
-            </View>
-            <View style={styles.sidebarIcon}>
-                <View style={styles.iconBox}>
-                    <FontAwesome5 name="user-shield" size={20} color="black" />
+            <Link to="" activeOpacity={styles.acticeSytule}>
+                <View style={[styles.iconBox, styles.sidebarIcon]}>
+                    <Ionicons name="logo-windows" size={20} color="black" />
                 </View>
-                <Text style={{ textAlign: "center", marginTop: 4 }}>1907</Text>
-            </View>
+            </Link>
+
+            <Link to="gift">
+                <View style={[styles.iconBox, styles.sidebarIcon]}>
+                    <FontAwesome name="gift" size={20} color="black" />
+                </View>
+            </Link>
+            <Link to="people">
+                <View style={styles.sidebarIcon}>
+                    <View style={styles.iconBox}>
+                        <FontAwesome5
+                            name="user-shield"
+                            size={20}
+                            color="black"
+                        />
+                    </View>
+                    <Text style={{ textAlign: "center", marginTop: 4 }}>
+                        1907
+                    </Text>
+                </View>
+            </Link>
+
             <View style={styles.sidebarIcon}>
                 <View style={styles.iconBox}>
                     <FontAwesome5 name="user-clock" size={20} color="black" />
                 </View>
                 <Text style={{ textAlign: "center", marginTop: 4 }}>302</Text>
             </View>
+
             <View style={styles.sidebarIcon}>
                 <View style={styles.iconBox}>
                     <FontAwesome5 name="box-open" size={20} color="black" />
                 </View>
                 <Text style={{ textAlign: "center", marginTop: 4 }}>13</Text>
             </View>
+
             <View style={styles.settingIcon}>
                 <Ionicons name="settings" size={22} color="black" />
             </View>
@@ -55,5 +72,10 @@ const styles = StyleSheet.create({
         // marginBottom: 35,
         borderRadius: 50,
         elevation: 3,
+    },
+
+    acticeSytule: {
+        color: "red",
+        backgroundColor: "red",
     },
 });

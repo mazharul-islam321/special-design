@@ -8,6 +8,7 @@ import {
     TouchableWithoutFeedback,
     TouchableOpacity,
 } from "react-native";
+import { Link } from "react-router-native";
 import { FontAwesome5 } from "@expo/vector-icons";
 import { MaterialIcons } from "@expo/vector-icons";
 import { Foundation } from "@expo/vector-icons";
@@ -79,17 +80,13 @@ export default function BottomBar() {
                         justifyContent: "center",
                     }}
                 >
-                    <TouchableOpacity
-                        onPress={() => {
-                            Alert.alert("click");
-                        }}
-                    >
+                    <Link to="/">
                         <MaterialIcons
                             name="favorite"
                             size={24}
                             color="black"
                         />
-                    </TouchableOpacity>
+                    </Link>
                 </View>
                 <View
                     style={{
@@ -99,13 +96,9 @@ export default function BottomBar() {
                         marginStart: 20,
                     }}
                 >
-                    <TouchableOpacity
-                        onPress={() => {
-                            Alert.alert("click");
-                        }}
-                    >
+                    <Link to="/live">
                         <MaterialIcons name="live-tv" size={24} color="black" />
-                    </TouchableOpacity>
+                    </Link>
                 </View>
                 <View
                     style={{
@@ -115,17 +108,13 @@ export default function BottomBar() {
                         marginStart: 65,
                     }}
                 >
-                    <TouchableOpacity
-                        onPress={() => {
-                            Alert.alert("click");
-                        }}
-                    >
+                    <Link to="/store">
                         <Foundation
                             name="shopping-bag"
                             size={24}
                             color="black"
                         />
-                    </TouchableOpacity>
+                    </Link>
                 </View>
                 <View
                     style={{
@@ -134,13 +123,9 @@ export default function BottomBar() {
                         justifyContent: "center",
                     }}
                 >
-                    <TouchableOpacity
-                        onPress={() => {
-                            Alert.alert("click");
-                        }}
-                    >
+                    <Link to="/home">
                         <FontAwesome5 name="gifts" size={24} color="black" />
-                    </TouchableOpacity>
+                    </Link>
                 </View>
             </View>
         </View>

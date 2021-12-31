@@ -7,6 +7,7 @@ import {
     Text,
     View,
 } from "react-native";
+import Profile from "./Profile";
 
 export default function MainScreen() {
     const images = [
@@ -61,6 +62,7 @@ export default function MainScreen() {
     ];
     return (
         <>
+            <Profile></Profile>
             <View style={{ paddingTop: 5 }}>
                 <FlatList
                     numColumns={3}

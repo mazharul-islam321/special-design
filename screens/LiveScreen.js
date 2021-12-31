@@ -1,10 +1,10 @@
 import React from "react";
 import { StyleSheet, Text, View } from "react-native";
 
-export default function HomeScreen() {
+export default function LiveScreen() {
     return (
         <View style={styles.container}>
-            <Text>this is home screen</Text>
+            <Text>this is live screen</Text>
         </View>
     );
 }
@@ -12,7 +12,7 @@ export default function HomeScreen() {
 const styles = StyleSheet.create({
     container: {
         flex: 1,
-        backgroundColor: "green",
+        backgroundColor: "red",
         justifyContent: "center",
         alignItems: "center",
     },
